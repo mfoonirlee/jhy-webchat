@@ -1,0 +1,35 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    /*-moz-user-select: none;*/
+    /*-webkit-user-select: none;*/
+}
+html {
+    color:#333;
+    background-color: #f8f8f8;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+a {
+    text-decoration:none;
+}
+body *{
+    font:12px/1.5 "Microsoft Yahei",tahoma,arial;
+}
+img{
+    display: block;
+}
+img,
+input,
+button{
+    border: 0;
+    outline: none;
+}
+input{
+    -webkit-appearance: none;
+    /*-webkit-user-select: text;*/
+}
+li{
+    list-style: none;
+}
