@@ -1,0 +1,25 @@
+.bg {
+  background: url(../img/bg.jpg) no-repeat top center;
+  background-size: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fff; }
+  .bg p {
+    width: 180px;
+    margin: 20px auto;
+    font-size: 24px;
+    color: #a8ce3b;
+    border-radius: 10px;
+    border: 2px solid #a8ce3b;
+    text-align: center;
+    text-align: center;
+    height: 40px; }
+    .bg p:first-of-type {
+      margin-top: 360px;
+      line-height: 34px;
+      font-size: 32px; }
+
+/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,214 @@
+@charset "utf-8";
+$font: 12px/1.5 'Microsoft YaHei', '宋体', Regular, '黑体', Arial, "Lucida Grande", Verdana;
+$c-black: #282727;
+$c-green: #a8ce3b;
+$c-grey: #f5f5f5;
+
+.info{
+    font: $font;
+    width: 100%;
+    position: relative;
+    padding-bottom: 100px;
+    background: url(../img/bg2.jpg) #fff no-repeat center bottom;
+    background-size: 100%;
+    h4{
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        margin: 40px 0 20px 0;
+    }
+    img{
+        width: 100%;
+    }
+}
+@mixin delay($sec: 1s){
+    -webkit-animation-delay: $sec;
+    animation-delay: $sec;
+}
+@mixin dur($sec: 1s){
+    -webkit-animation-duration: $sec;
+    animation-duration: $sec;
+}
+
+.ani-rotate{
+    -webkit-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.ani-scale{
+    -webkit-animation-name: scale;
+    animation-name: scale;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+@-webkit-keyframes scale {
+    from {
+        -webkit-transform: scale(1.2);
+        opacity: .5;
+    }
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes scale {
+    from {
+        transform: scale(1.5);
+        opacity: .5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.ani-fromleft{
+    -webkit-animation-name: fromleft;
+    animation-name: fromleft;
+
+}
+
+@-webkit-keyframes fromleft {
+    from {
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fromleft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.row{
+    li{
+        &:active{
+            background-color: #eee;
+            i{
+                -webkit-transform: rotate3d(0,1,0,360deg);
+                transform: rotate3d(0,1,0,360deg);
+                -webkit-transition: all 1s;
+                transition: all 1s;
+            }
+        }
+        position: relative;
+        padding: 10px 30px 10px 60px;
+        color: #666;
+        &:first-of-type{
+            @include dur;
+        }
+        &:nth-of-type(2){
+            @include dur(2s);
+            i{
+                @include delay(.5s);
+            }
+        }
+        &:nth-of-type(3){
+            @include dur(3s);
+        }
+        &:nth-of-type(4){
+            @include dur(4s);
+        }
+        &:nth-of-type(5){
+            @include dur(5s);
+        }
+        &:last-of-type{
+            i{
+                @include delay(1s);
+            }
+        }
+        i{
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            margin-top: -22px;
+            border: 1px solid $c-green;
+            color: $c-green;
+            border-radius: 5px;
+            width: 16px;
+            padding: 3px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}
+.row2{
+    li{
+        padding: 40px 30px 40px 60px;
+        i{
+
+            margin-top: -40px;
+        }
+    }
+}
+.lic{
+    border-bottom: 1px solid $c-green;
+    .line{
+        position: relative;
+        width: 212px;
+        margin: 0 auto;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            border-bottom: 1px dotted $c-green;
+        }
+
+        ul{
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+            li{
+                float: left;
+                z-index: 1;
+                border: 1px solid $c-green;
+                color: $c-green;
+                border-radius: 5px;
+                background-color: #fff;
+                padding: 2px 5px;
+                width: 32px;
+                &:nth-of-type(2){
+                    margin: 0 40px;
+                    @include delay(.5s);
+                }
+                &:last-of-type{
+                    @include delay(1s);
+                }
+            }
+        }
+    }
+}
+
+.t{
+    background-color: $c-green;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+}
