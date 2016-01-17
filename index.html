@@ -10,50 +10,53 @@
         <script type='text/javascript' data-main='./js/index.js' src='./js/lib/require.min.js'></script>
     </head>
     <body>
-        <p class="nav">
-            <img src="./img/logo.jpg" alt="">
-            <span><i></i>400 821 3860</span>
-        </p>
-        <div class='slider'>
-            <ul class='img'>
-                <li><img src="./img/pic.jpg" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-            </ul>
-            <ul class="dot">
-                <li class="current"></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class='menu'>
-            <ul>
-                <li class='ani-dropdown'>
-                    <p class='p1'></p>
-                    <span class='ani-fadein'>君禾介绍</span>
-                </li>
-                <li class='ani-dropdown'>
-                    <p class='p2'></p>
-                    <span class='ani-fadein'>订购服务</span>
-                </li>
-                <li class='ani-dropdown'>
-                    <p class='p3'></p>
-                    <span class='ani-fadein'>农场活动</span>
-                </li>
-                <li class='ani-dropdown'>
-                    <p class='p4'></p>
-                    <span class='ani-fadein'>君禾社区</span>
-                </li>
-                <li class='ani-dropdown'>
-                    <p class='p5'></p>
-                    <span class='ani-fadein'>会员中心</span>
-                </li>
-                <li class='ani-dropdown'>
-                    <p class='p6'></p>
-                    <span class='ani-fadein'>企业联盟</span>
-                </li>
-            </ul>
-        </div>
+        <article id='j_index'>
+            <p class="nav">
+                <img src="./img/logo.jpg" alt="">
+                <span><i></i>400 821 3860</span>
+            </p>
+            <div class='slider'>
+                <ul id='j_slider' class='img'>
+                    <li><img src="./img/pic.jpg" alt=""></li>
+                    <li><img src="./img/pic.jpg" alt=""></li>
+                    <li><img src="./img/pic.jpg" alt=""></li>
+                </ul>
+                <ul id='j_dot' class="dot">
+                    <li @click='choosePage' data-index='1' class="current"></li>
+                    <li @click='choosePage' data-index='2'></li>
+                    <li @click='choosePage' data-index='3'></li>
+                </ul>
+            </div>
+            <div id='j_menu' class='menu'>
+                <ul>
+                    <li class='ani-dropdown'>
+                        <p class='p1'></p>
+                        <span class='ani-fadein'>君禾介绍</span>
+                    </li>
+                    <li class='ani-dropdown'>
+                        <p class='p2'></p>
+                        <span class='ani-fadein'>订购服务</span>
+                    </li>
+                    <li class='ani-dropdown'>
+                        <p class='p3'></p>
+                        <span class='ani-fadein'>农场活动</span>
+                    </li>
+                    <li class='ani-dropdown'>
+                        <p class='p4'></p>
+                        <span class='ani-fadein'>君禾社区</span>
+                    </li>
+                    <li class='ani-dropdown'>
+                        <p class='p5'></p>
+                        <span class='ani-fadein'>会员中心</span>
+                    </li>
+                    <li class='ani-dropdown'>
+                        <p class='p6'></p>
+                        <span class='ani-fadein'>企业联盟</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
         <ul class="bottom ani-downin">
             <li>客服微信</li>
             <li>电话咨询</li>

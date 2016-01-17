@@ -1,0 +1,102 @@
+.ani-dropdown {
+  -webkit-animation-name: drpodown;
+  animation-name: drpodown; }
+
+@-webkit-keyframes drpodown {
+  from {
+    -webkit-transform: translateY(-300%);
+    opacity: 0; }
+  50% {
+    -webkit-transform: translateY(-150%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1; } }
+@keyframes drpodown {
+  from {
+    transform: translateY(-200%);
+    opacity: 0; }
+  50% {
+    -webkit-transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+.ani-turncircle {
+  -webkit-animation-name: turncircle;
+  animation-name: turncircle;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: ease-in-out;
+  animation-fill-mode: ease-in-out; }
+
+@-webkit-keyframes turncircle {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 0);
+    color: #fff;
+    border-color: #fff; }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    color: #a8ce3b;
+    border-color: #a8ce3b; }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 0);
+    color: #fff;
+    border-color: #fff; } }
+@keyframes turncircle {
+  from {
+    transform: rotate3d(0, 1, 0, 0);
+    color: #fff;
+    border-color: #fff; }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+    color: #a8ce3b;
+    border-color: #a8ce3b; }
+  to {
+    transform: rotate3d(0, 1, 0, 0);
+    color: #fff;
+    border-color: #fff; } }
+.farm ul {
+  width: 100%; }
+  .farm ul li {
+    background-color: #fff;
+    padding-top: 10px;
+    position: relative; }
+    .farm ul li:first-of-type {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      z-index: 3; }
+      .farm ul li:first-of-type p {
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s; }
+    .farm ul li:nth-of-type(2) {
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+      z-index: 2; }
+      .farm ul li:nth-of-type(2) p {
+        -webkit-animation-delay: 2.3s;
+        animation-delay: 2.3s; }
+    .farm ul li:last-of-type {
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      z-index: 1; }
+      .farm ul li:last-of-type p {
+        -webkit-animation-delay: 2.6s;
+        animation-delay: 2.6s; }
+    .farm ul li img {
+      height: 200px;
+      width: 100%;
+      display: block; }
+    .farm ul li p {
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      text-align: center;
+      width: 160px;
+      font-size: 22px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -18px 0 0 -80px; }
+
+/*# sourceMappingURL=farm.css.map */
