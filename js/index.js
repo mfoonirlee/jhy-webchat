@@ -12,8 +12,15 @@ require(['vue', 'Zepto'], function (Vue, $) {
         methods: {
             //选择某页
             choosePage: function (e) {
-                $target = $(e.currentTarget);
+                var $target = $(e.currentTarget);
                 this.turnPage(parseInt($target.data('index')), true);
+            },
+            //跳转页面
+            jump: function(e) {
+                var $target = $(e.currentTarget),
+                    href = $target.data('href');
+
+                location.href = href;
             },
             /**
             * @param: 页码
