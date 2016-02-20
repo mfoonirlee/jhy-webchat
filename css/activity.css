@@ -59,7 +59,7 @@
   width: 100%;
   height: 300px;
   background: url(../img/theme1.jpg) no-repeat bottom center;
-  background-size: 100%;
+  background-size: 120%;
   background-color: #7fbf26;
   position: relative; }
   .activity .t:before {
@@ -73,12 +73,13 @@
     top: 50%;
     margin: -24px 0 0 -100px; }
 .activity .ul {
-  margin-top: 10px;
+  margin-top: 3px;
   overflow: hidden; }
   .activity .ul li {
     float: left;
     position: relative;
-    width: calc(50% - 5px);
+    /*width: calc(50% - 5px);*/
+    width: 49%;
     height: 150px; }
     .activity .ul li:before {
       position: absolute;
@@ -110,7 +111,7 @@
     .activity .ul li:nth-of-type(2) {
       -webkit-animation-duration: 1.4s;
       animation-duration: 1.4s;
-      margin-left: 10px;
+      margin-left: 3px;
       background: url(../img/theme3.jpg) no-repeat center center; }
       .activity .ul li:nth-of-type(2):before {
         content: '24节气'; }
@@ -122,7 +123,7 @@
     .activity .ul li:nth-of-type(3) {
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
-      margin-top: 10px;
+      margin-top: 3px;
       background: url(../img/theme4.jpg) no-repeat center center; }
       .activity .ul li:nth-of-type(3):before {
         content: '琴棋书画'; }
@@ -134,7 +135,7 @@
     .activity .ul li:last-of-type {
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
-      margin: 10px 0 0 10px;
+      margin: 3px 0 0 3px;
       background: url(../img/theme5.jpg) no-repeat center center; }
       .activity .ul li:last-of-type:before {
         content: '定制主题日'; }

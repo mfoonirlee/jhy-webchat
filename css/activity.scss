@@ -84,7 +84,7 @@ $c-grey: #f5f5f5;
         width: 100%;
         height: 300px;
         background: url(../img/theme1.jpg) no-repeat bottom center;
-        background-size: 100%;
+        background-size: 120%;
         background-color: #7fbf26;
         position: relative;
         &:before{
@@ -100,12 +100,13 @@ $c-grey: #f5f5f5;
         }
     }
     .ul{
-        margin-top: 10px;
+        margin-top: 3px;
         overflow: hidden;
         li{
             float: left;
             position: relative;
-            width: calc(50% - 5px);
+            /*width: calc(50% - 5px);*/
+            width: 49%;
             height: 150px;
             &:before{
                 position: absolute;
@@ -119,7 +120,6 @@ $c-grey: #f5f5f5;
             }
             &:after{
                 content: '';
-
                 background-size: 100%;
                 background-repeat: no-repeat;
                 position: absolute;
@@ -147,7 +147,7 @@ $c-grey: #f5f5f5;
                 &:before{
                     content: '24节气';
                 }
-                margin-left: 10px;
+                margin-left: 3px;
                 background: url(../img/theme3.jpg) no-repeat center center;
                 &:after{
                     width: 80px;
@@ -162,7 +162,7 @@ $c-grey: #f5f5f5;
                 &:before{
                     content: '琴棋书画';
                 }
-                margin-top: 10px;
+                margin-top: 3px;
                 background: url(../img/theme4.jpg) no-repeat center center;
                 &:after{
                     width: 40px;
@@ -177,7 +177,7 @@ $c-grey: #f5f5f5;
                 &:before{
                     content: '定制主题日';
                 }
-                margin: 10px 0 0 10px;
+                margin: 3px 0 0 3px;
                 background: url(../img/theme5.jpg) no-repeat center center;
                 &:after{
                     width: 80px;
