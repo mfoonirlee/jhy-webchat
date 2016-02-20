@@ -209,7 +209,8 @@
 /*首页菜单样式*/
 .menu {
   font: 12px/1.5 "Microsoft YaHei", "宋体", Regular, "黑体", Arial, "Lucida Grande", Verdana;
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 48px; }
   .menu ul {
     overflow: hidden;
     padding-top: 10px;

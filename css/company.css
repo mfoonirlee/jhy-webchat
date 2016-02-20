@@ -1,0 +1,36 @@
+.company {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  background: url(../img/companybg.jpg) no-repeat top center;
+  background-size: 130%; }
+  .company p {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background-color: #fff; }
+    .company p img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -14px;
+      margin-left: -125px; }
+    .company p span {
+      font-size: 24px;
+      display: inline-block;
+      height: 40px;
+      width: 120px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -20px 0 0 -45px; }
+
+/*# sourceMappingURL=company.css.map */

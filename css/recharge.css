@@ -1,0 +1,88 @@
+.ani-fromleft {
+  -webkit-animation-name: fromleft;
+  animation-name: fromleft; }
+
+.ani-scalein {
+  -webkit-animation-name: scale-in;
+  animation-name: scale-in;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s; }
+
+@-webkit-keyframes fromleft {
+  from {
+    -webkit-transform: translateX(100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0);
+    opacity: 1; } }
+@keyframes fromleft {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+@-webkit-keyframes scale-in {
+  from {
+    -webkit-transform: scale(2);
+    opacity: 0; }
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1; } }
+@keyframes scale-in {
+  from {
+    -webkit-transform: scale(2);
+    opacity: 0; }
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1; } }
+.recharge p {
+  background-color: #a8ce3b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0; }
+.recharge .ul {
+  background-color: #a8ce3b;
+  color: #fff;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 10px; }
+.recharge ul {
+  margin: 30px; }
+  .recharge ul li {
+    padding: 5px 0; }
+    .recharge ul li:nth-of-type(1) {
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s; }
+    .recharge ul li:nth-of-type(2) {
+      -webkit-animation-duration: 0.9s;
+      animation-duration: 0.9s; }
+    .recharge ul li:nth-of-type(3) {
+      -webkit-animation-duration: 1.2s;
+      animation-duration: 1.2s; }
+    .recharge ul li:nth-of-type(4) {
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s; }
+    .recharge ul li:nth-of-type(5) {
+      -webkit-animation-duration: 1.8s;
+      animation-duration: 1.8s; }
+    .recharge ul li:nth-of-type(6) {
+      -webkit-animation-duration: 2.1s;
+      animation-duration: 2.1s; }
+    .recharge ul li:nth-of-type(7) {
+      -webkit-animation-duration: 2.4s;
+      animation-duration: 2.4s; }
+.recharge button {
+  border: 1px solid #a8ce3b;
+  color: #a8ce3b;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2px 5px;
+  margin: 30px auto;
+  width: 76px;
+  display: block; }
+
+/*# sourceMappingURL=recharge.css.map */
