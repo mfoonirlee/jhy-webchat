@@ -1,0 +1,198 @@
+@mixin ani($n: 1){
+    &:nth-of-type(#{$n}){
+        -webkit-animation-duration: ($n * 0.3) + s;
+        animation-duration: ($n * 0.3) + s;
+    }
+}
+
+@mixin dur($sec: 1s){
+    -webkit-animation-duration: $sec;
+    animation-duration: $sec;
+}
+
+@-webkit-keyframes downrotatein{
+    from{
+        -webkit-transform: translateY(200%) scale(.2) rotate3d(1, 0, 0, 0deg);
+        opacity: 0;
+    }
+    to{
+        -webkit-transform: translateY(0) scale(1) rotate3d(1, 0, 0, -720deg);
+        opacity: 1;
+    }
+}
+@keyframes downrotatein{
+    from{
+        transform: translateY(200%) scale(.2) rotate3d(1, 0, 0, 0deg);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) scale(1) rotate3d(1, 0, 0, -720deg);
+        opacity: 1;
+    }
+}
+.ani-downrotatein{
+    -webkit-animation-name: downrotatein;
+    animation-name: downrotatein;
+    @for $i from 1 through 8{
+        @include ani($i);
+    }
+}
+.ani-upin{
+    -webkit-animation-name: upin;
+    animation-name: upin;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes upin{
+    from{
+        -webkit-transform: translateY(200%);
+        opacity: 0;
+    }
+    to{
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes upin{
+    from{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.ani-downin{
+    -webkit-animation-name: downin;
+    animation-name: downin;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes downin {
+    from {
+        -webkit-transform: translateY(100%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes downin {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.ani-dropdown{
+    -webkit-animation-name: drpodown;
+    animation-name: drpodown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+@-webkit-keyframes drpodown {
+    from {
+        -webkit-transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes drpodown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.ani-leftin{
+    -webkit-animation-name: leftin;
+    animation-name: leftin;
+}
+@-webkit-keyframes leftin {
+    from {
+        -webkit-transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftin {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ani-rightin{
+    -webkit-animation-name: rightin;
+    animation-name: rightin;
+}
+@-webkit-keyframes rightin {
+    from {
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes rightin {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ani-fadein{
+    -webkit-animation-name: fadein;
+    animation-name: fadein;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

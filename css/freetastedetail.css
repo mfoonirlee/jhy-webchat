@@ -1,0 +1,90 @@
+.freetastedetail {
+  padding: 0 20px; }
+  .freetastedetail .t {
+    margin: 20px auto;
+    position: relative;
+    width: 280px; }
+    .freetastedetail .t img {
+      width: 100%; }
+    .freetastedetail .t p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(160, 198, 52, 0.7);
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      padding: 5px 0; }
+  .freetastedetail .info h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .freetastedetail .fill {
+    margin: 20px auto;
+    padding: 20px 0;
+    border-top: 1px solid #999; }
+    .freetastedetail .fill ul li {
+      margin-top: 10px;
+      position: relative; }
+      .freetastedetail .fill ul li span {
+        width: 80px;
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        font-size: 14px;
+        padding: 6px 0;
+        left: 0;
+        top: 0; }
+      .freetastedetail .fill ul li input {
+        width: 70%;
+        border: 1px solid #999;
+        margin-left: 90px;
+        padding: 6px 0; }
+      .freetastedetail .fill ul li .s {
+        width: 80px;
+        margin-left: 122px; }
+      .freetastedetail .fill ul li i {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background-color: #666;
+        top: 0; }
+        .freetastedetail .fill ul li i:before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 2px;
+          background-color: #fff;
+          left: 8px;
+          top: 15px; }
+      .freetastedetail .fill ul li em {
+        margin-left: 5px;
+        color: red; }
+      .freetastedetail .fill ul li .add {
+        left: 90px; }
+        .freetastedetail .fill ul li .add:after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 16px;
+          background-color: #fff;
+          left: 15px;
+          top: 8px; }
+      .freetastedetail .fill ul li .reduce {
+        left: 204px; }
+  .freetastedetail .b {
+    width: 190px;
+    margin: 40px auto; }
+    .freetastedetail .b span {
+      background-color: #a8ce3b;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      display: inline-block;
+      width: 60px;
+      text-align: center;
+      margin: 0 10px; }
+
+/*# sourceMappingURL=freetastedetail.css.map */
