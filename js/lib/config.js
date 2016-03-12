@@ -3,7 +3,9 @@ var require = {
         paths: {
             vue: './lib/vue.min',
             Zepto: './lib/zepto.min',
-            Loading: './com/loading'
+            Loading: './com/loading',
+            Req: './com/request',
+            Util: './com/util'
         },
         shim: {
         }

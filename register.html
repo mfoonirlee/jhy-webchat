@@ -15,53 +15,54 @@
             <ul>
                 <li>
                     <span>用户名</span>
-                    <input type="text">
+                    <input type="text" v-model='username'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>email</span>
-                    <input type="text">
+                    <input type="text" v-model='email'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>密码</span>
-                    <input type="password">
+                    <input @input='onInputPwd' type="password" v-model='pwd'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>密码强度</span>
-                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;弱</i><i>&nbsp;&nbsp;&nbsp;&nbsp;中</i><i>&nbsp;&nbsp;&nbsp;&nbsp;强</i></p>
+                    <p><i class={{lv1}}>&nbsp;&nbsp;&nbsp;&nbsp;弱</i><i class={{lv2}}>&nbsp;&nbsp;&nbsp;&nbsp;中</i><i class={{lv3}}>&nbsp;&nbsp;&nbsp;&nbsp;强</i>
+                        </p>
                 </li>
                 <li>
                     <span>确认密码</span>
-                    <input type="password">
+                    <input type="password"  v-model='confirmpwd'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>姓名</span>
-                    <input type="text">
+                    <input type="text" v-model='name'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>手机</span>
-                    <input type="text">
+                    <input type="text" v-tel='tel'>
                     <em>*</em>
                 </li>
                 <li>
                     <span>生日</span>
-                    <input class='s1' type="text">月<input class='s1' type="text">日
+                    <input class='s1' type="text" v-model='bmonth'>月<input class='s1' type="text" v-model='bday'>日
                     <em>*</em>
                 </li>
                 <li>
                     <span>验证码</span>
-                    <input class='s2' type="text">
+                    <input class='s2' type="text" v-model='icode'>
                     <img src="" alt=""/>
                 </li>
             </ul>
             <p class='bline'>
-                <input type="checkbox" /> 我已看过并接受《<span>用户协议</span>》
+                <input id='j_checkbox' type="checkbox" checked={{isCheck}} /> 我已看过并接受《<span @click='jump' data-href='membernotice.html'>用户协议</span>》
             </p>
-            <button>立即注册</button>
+            <button @click='onSubmit'>立即注册</button>
             <p class="b">我已有账号，我要登录</p>
             <p class="b">您忘记密码了吗？</p>
         </article>

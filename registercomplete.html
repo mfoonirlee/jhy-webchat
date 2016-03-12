@@ -16,12 +16,12 @@
                 <p>现在可以操作：</p>
             </div>
             <ul class='ani-outsidein'>
-                <li><img src="./img/r1.png" alt=""><span>回到首页</span></li>
-                <li><img src="./img/r2.png" alt=""><span>充值服务</span></li>
+                <li @click='jump' data-href='index.html'><img src="./img/r1.png" alt=""><span>回到首页</span></li>
+                <li @click='jump' data-href='recharge.html'><img src="./img/r2.png" alt=""><span>充值服务</span></li>
                 <li><img src="./img/r3.png" alt=""><span>消费种子服务</span></li>
-                <li><img src="./img/r4.png" alt=""><span>农场活动</span></li>
+                <li @click='jump' data-href='activitylist.html'><img src="./img/r4.png" alt=""><span>农场活动</span></li>
                 <li><img src="./img/r5.png" alt=""><span>君禾集市</span></li>
-                <li><img src="./img/r6.png" alt=""><span>联系我们</span></li>
+                <li @click='jump' data-href='contactus.html'><img src="./img/r6.png" alt=""><span>联系我们</span></li>
             </ul>
         </article>
     </body>

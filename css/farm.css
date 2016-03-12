@@ -63,6 +63,7 @@
     padding-top: 10px;
     position: relative; }
     .farm ul li:first-of-type {
+      padding-top: 0;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
       z-index: 3; }

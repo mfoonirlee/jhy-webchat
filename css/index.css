@@ -317,7 +317,7 @@
       width: 100%;
       will-change: transform; }
       .slider .img li img {
-        width: 100%;
+        height: 100%;
         display: block; }
       .slider .img li:nth-of-type(2) {
         -webkit-transform: translateX(100%);
@@ -466,7 +466,7 @@
     margin-top: 10px;
     position: relative; }
     .register ul li span {
-      width: 80px;
+      width: 60px;
       display: inline-block;
       text-align: right;
       position: absolute;
@@ -475,15 +475,15 @@
       left: 0;
       top: 0; }
     .register ul li input {
-      width: 70%;
+      width: 60%;
       border: 1px solid #999;
-      margin-left: 90px;
+      margin-left: 80px;
       padding: 6px 0; }
     .register ul li .s1 {
-      width: 80px;
-      margin-right: 20px; }
+      width: 60px;
+      margin-right: 10px; }
       .register ul li .s1:last-of-type {
-        margin-left: 30px; }
+        margin-left: 10px; }
     .register ul li .s2 {
       width: 120px; }
     .register ul li em {
@@ -498,11 +498,23 @@
         padding: 4px 0;
         width: 25%;
         display: inline-block; }
+      .register ul li p i.current {
+        background-color: #a8ce3b;
+        color: #fff; }
+    .register ul li img {
+      width: 60px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 205px; }
   .register p.bline {
     width: 200px;
     margin: 20px auto; }
     .register p.bline input {
-      -webkit-appearance: checkbox; }
+      -webkit-appearance: checkbox;
+      display: inline-block;
+      line-height: 15px;
+      vertical-align: middle; }
     .register p.bline span {
       color: #0033cc; }
   .register button {
@@ -537,7 +549,8 @@
     text-align: center;
     font-size: 18px; }
   .registercomplete .t p {
-    width: 320px;
+    width: 240px;
+    padding: 0 40px;
     margin: 0 auto; }
 .registercomplete ul {
   width: 280px;

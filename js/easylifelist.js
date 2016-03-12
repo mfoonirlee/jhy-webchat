@@ -10,5 +10,4 @@ require(['vue', 'Zepto', 'Loading'], function (Vue, $, Loading) {
             }
         }
     });
-    Loading.showLoading();
 });
