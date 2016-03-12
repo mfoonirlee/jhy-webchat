@@ -13,29 +13,11 @@
         <div id='j_main' class='freetaste'>
             <p class='t1'>免费试吃</p>
             <ul>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <h3>什锦炒饭</h3>
-                    <span>代金券，全场通用，可叠加不限时段通用！全国巨献！</span>
-                    <i>我要试吃</i><i>了解详情</i>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <h3>什锦炒饭</h3>
-                    <span>代金券，全场通用，可叠加不限时段通用！全国巨献！</span>
-                    <i>我要试吃</i><i>了解详情</i>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <h3>什锦炒饭</h3>
-                    <span>代金券，全场通用，可叠加不限时段通用！全国巨献！</span>
-                    <i>我要试吃</i><i>了解详情</i>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <h3>什锦炒饭</h3>
-                    <span>代金券，全场通用，可叠加不限时段通用！全国巨献！</span>
-                    <i>我要试吃</i><i>了解详情</i>
+                <li class='ani-downrotatein' v-for="n in list">
+                    <img v-bind:src='n.img' alt="">
+                    <h3>{{n.cond}}</h3>
+                    <span>{{n.conte}}</span>
+                    <i data-aid={{n.id}} data-type='1' @click='jumptodetail'>我要试吃</i><i data-type='2' data-aid={{n.id}} @click='jumptodetail'>了解详情</i>
                 </li>
             </ul>
         </div>

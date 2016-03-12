@@ -6,8 +6,8 @@ define(['Zepto'], function ($) {
     */
     var request = {
         reqHost: {
-            dev: 'http://112.124.110.58:8085/',
-            prd: 'http://112.124.110.58:8085/'
+            dev: 'http://localhost:82/',
+            prd: 'http://112.124.110.58:8080/'
         },
         reqHash: {
             //请求注册验证码
@@ -25,10 +25,10 @@ define(['Zepto'], function ($) {
             //免费分享列表
             freeShareList: 'service/plus/index.php?tid=27',
             //免费分享详情
-            freeShareDetail: 'service/plus/view_data.php?aid={aid}'
+            freeShareDetail: 'service/plus/view_data.php?'
             //免费分享报名
         },
-        execute: function (reqName, params, success, error, scope) {
+        execute: function (reqName, paramsStr, success, error, scope) {
             var self = this,
                 reqUrl = this.getReqURL(reqName);
 
@@ -37,10 +37,10 @@ define(['Zepto'], function ($) {
                 url: reqUrl,
                 contentType: 'application/json;charset=utf-8',
                 content: self,
-                data: JSON.stringify(params),
+                data: paramsStr,
                 success: function (data) {
                     console.log(reqName + '请求成功');
-                    success && typeof success === 'function' && scope && success.call(scope, data);
+                    success && typeof success === 'function' && scope && success.call(scope, new Function('return ' + data)());
                 },
                 error: function (data) {
                     console.log(reqName + '请求失败');
