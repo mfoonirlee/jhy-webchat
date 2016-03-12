@@ -1,0 +1,39 @@
+{dede:php}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+class item {
+};
+class dateitem {
+};
+
+$result = array();
+
+$sql = "select freesharetype,ename,tagname, aid, activityimg, title, activitycondition,activitychangedate,activitycontent,isactive from dede_archives INNER JOIN dede_addonshare on dede_archives.id=dede_addonshare.aid INNER JOIN dede_sys_enum on dede_addonshare.freesharetype=dede_sys_enum.evalue where dede_sys_enum.egroup='freesharetype'";
+$query = mysql_query($sql);
+$result["tlist"] =array();
+$result["plist"]=array();
+while($row=mysql_fetch_array($query)){
+    $item = new item();
+    $item->type = iconv("gb2312","utf-8", $row['freesharetype']);
+    $item->name = iconv("gb2312","utf-8",$row["ename"]);
+    $result["tlist"][] = $item;
+	$dateitem=new dateitem();
+	$dateitem->tag=iconv("gb2312","utf-8", $row['tagname']);
+	$dateitem->type = iconv("gb2312","utf-8", $row['freesharetype']);
+	$dateitem->id=iconv("gb2312","utf-8", $row['aid']);
+	$dateitem->img=iconv("gb2312","utf-8", $row['activityimg']);
+	$dateitem->name=iconv("gb2312","utf-8", $row['title']);
+	$dateitem->cond=iconv("gb2312","utf-8", $row['activitycondition']);
+	$dateitem->date=date('Y-m-d',iconv("gb2312","utf-8", $row['activitychangedate']));
+	$dateitem->rank="1";
+	$dateitem->cont=iconv("gb2312","utf-8", $row['activitycontent']);
+	$dateitem->issoldout=iconv("gb2312","utf-8", $row['isactive'])=="是"?1:0;
+	$result["plist"][]=$dateitem;
+}
+echo json_encode($result);
+
+header('Content-Type: text/json; charset=utf-8');
+
+{/dede:php}

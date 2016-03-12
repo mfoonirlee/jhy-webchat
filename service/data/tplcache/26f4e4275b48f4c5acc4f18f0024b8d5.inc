@@ -1,0 +1,3 @@
+
+<field:isnew itemname="是否是新活动" autofield="0" notsend="0" type="radio" isnull="true" islist="0" default="是,不是"  maxlength="250" page="">
+</field:isnew>
