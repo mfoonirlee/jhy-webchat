@@ -13,6 +13,7 @@ require(['vue', 'Zepto', 'Loading', 'Req'], function (Vue, $, Loading, Req) {
                 this.list = data.plist;
             }, function(data){
                 Loading.hideLoading();
+                alert('请求失败');
                 setTimeout(function () {
                     history.back(-1);
                 }, 2000);

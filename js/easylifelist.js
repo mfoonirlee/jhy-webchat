@@ -14,8 +14,9 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                 Loading.hideLoading();
                 this.list = data.list.map(function(n){n.name = Util.getNameByActType(n.type);return n;});
                 this.url = data.url;
-            }, function () {
+            }, function (data) {
                 Loading.hideLoading();
+                alert('请求失败');
                 setTimeout(function () {
                     history.back(-1);
                 }, 2000);

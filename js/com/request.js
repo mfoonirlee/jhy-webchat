@@ -7,6 +7,7 @@ define(['Zepto'], function ($) {
     var request = {
         reqHost: {
             dev: 'http://localhost:82/',
+            fat: 'http://10.32.118.20:82/',
             prd: 'http://112.124.110.58:8085/'
         },
         reqHash: {
@@ -61,6 +62,8 @@ define(['Zepto'], function ($) {
             // return 'prd';
             if(location.host.indexOf('localhost') > -1 || location.host.indexOf('file') > -1){
                 return 'dev';
+            }else if(location.host.indexOf('10.32.118.20') > -1){
+                return 'fat';
             }else{
                 return 'prd';
             }

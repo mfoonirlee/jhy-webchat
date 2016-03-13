@@ -15,6 +15,7 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                 this.list = data;
             },function () {
                 Loading.hideLoading();
+                alert('请求失败');
                 setTimeout(function () {
                     history.back(-1);
                 }, 2000);
@@ -31,9 +32,14 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                 var $target = $(e.currentTarget),
                     type = $target.data('type'),
                     aid = $target.data('id'),
-                    item = this.list.find(function(n){
-                        return n.id == aid;
-                    });
+                    item;
+
+                for(var i = 0, len = this.list.length; i < len; i++){
+                    if(this.list[i].id == aid){
+                        item = this.list[i];
+                        break;
+                    }
+                }
 
                 location.href = 'activitydetail.html?aid=' + aid + '&type=' + type + '&stime=' + item.stime + '&etime=' + item.etime + '&atype=' + Util.getQueryParam('atype');
             }
