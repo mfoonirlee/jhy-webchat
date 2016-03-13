@@ -12,40 +12,19 @@
     <body>
         <div id='j_main' class='easylifelist'>
             <ul>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <i>休闲养生</i>
-                    <h3>【201660227】活动描述</h3>
-                    <span>2016年1月1日在君禾园内举行了别开生面的农耕活动...</span>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <i>休闲养生</i>
-                    <h3>【201660227】活动描述</h3>
-                    <span>2016年1月1日在君禾园内举行了别开生面的农耕活动...</span>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <i>休闲养生</i>
-                    <h3>【201660227】活动描述</h3>
-                    <span>2016年1月1日在君禾园内举行了别开生面的农耕活动...</span>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <i>休闲养生</i>
-                    <h3>【201660227】活动描述</h3>
-                    <span>2016年1月1日在君禾园内举行了别开生面的农耕活动...</span>
-                </li>
-                <li class='ani-downrotatein'>
-                    <img src="./img/d1.jpg" alt="">
-                    <i>休闲养生</i>
-                    <h3>【201660227】活动描述</h3>
-                    <span>2016年1月1日在君禾园内举行了别开生面的农耕活动...</span>
-                </li>
+                <template v-for='n in list'>
+                    <li class='ani-downrotatein' @click='jumpByType' data-id={{n.id}} data-atype={{n.type}}>
+                        <img v-bind:src="n.img" alt="">
+                        <i>{{n.name}}</i>
+                        <h3>【{{n.date.slice(0, 10)}}】活动描述</h3>
+                        <span>{{n.desc}}</span>
+                    </li>
+                </template>
+
             </ul>
             <div class='bar'>
-                <span>回到官网首页</span>
-                <span>去商场购物</span>
+                <span @click='jump' data-href='index.html'>回到官网首页</span>
+                <span @click='jump' data-href={{url}}>去商场购物</span>
             </div>
         </div>
     </body>

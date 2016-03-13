@@ -204,7 +204,10 @@
     margin-left: -7px; }
   .easylifelist ul li span {
     color: #666;
-    display: block; }
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; }
   .easylifelist ul li i {
     display: inline-block;
     border: 1px solid #a8ce3b;

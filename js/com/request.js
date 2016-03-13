@@ -18,15 +18,19 @@ define(['Zepto'], function ($) {
             //慢生活详情
             //慢生活报名
             //主题活动主类列表
+            activityList: 'service/plus/activeslist_secondary.php?',
             //主题活动列表
+            activityListSec: 'service/plus/index.php?tid=26&',
             //主题活动详情
+            activityDetail: 'service/plus/view_data.php?',
             //主题活动报名
             //免费分享主类列表
             //免费分享列表
             freeShareList: 'service/plus/index.php?tid=27',
             //免费分享详情
-            freeShareDetail: 'service/plus/view_data.php?'
+            freeShareDetail: 'service/plus/view_data.php?',
             //免费分享报名
+            booking: 'service/plus/signup.php?'
         },
         execute: function (reqName, paramsStr, success, error, scope) {
             var self = this,

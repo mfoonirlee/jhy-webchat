@@ -5,7 +5,8 @@
     position: relative;
     width: 280px; }
     .freetastedetail .t img {
-      width: 100%; }
+      width: 100%;
+      height: 210px; }
     .freetastedetail .t p {
       position: absolute;
       bottom: 0;
@@ -43,6 +44,7 @@
         padding: 6px 0; }
       .freetastedetail .fill ul li .s {
         width: 80px;
+        text-align: center;
         margin-left: 122px; }
       .freetastedetail .fill ul li i {
         display: inline-block;

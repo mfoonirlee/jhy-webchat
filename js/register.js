@@ -78,7 +78,7 @@ require(['vue', 'Zepto', 'Loading', 'Util'], function (Vue, $, Loading, Util) {
                 if(!this.name){
                     return alert('请输入姓名');
                 }
-                if(!this.tel){
+                if(!this.tel || !/^1[345678][\d]{9}$/g.test(this.tel)){
                     return alert('请输入手机号');
                 }
                 if(!this.bmonth){

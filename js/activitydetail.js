@@ -3,18 +3,23 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
         el: '#j_main',
         data: function(){
             return {
-                msg: '我要试吃',
+                title: '',
                 data: {},
                 num: 1,
+                msg: '',
                 name: '',
                 tel: '',
-                addr: ''
+                date: ''
             }
         },
         created: function(){
+            //获取初始值
+            this.title = Util.getNameByActType(Util.getQueryParam('atype'));
             this.changeType(Util.getQueryParam('type'));
+            this.date = Util.getQueryParam('stime');
+
             Loading.showLoading();
-            Req.execute('freeShareDetail', 'aid=' + Util.getQueryParam('aid'), function(data){
+            Req.execute('activityDetail', 'aid=' + Util.getQueryParam('aid'), function(data){
                 Loading.hideLoading();
                 this.data = data;
             }, function(data){
@@ -30,11 +35,13 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                 if(this.type == '1'){
                     $('#j_tab1').show();
                     $('#j_tab2').hide();
-                    this.msg = '我要试吃';
+                    this.msg = '我要报名';
+                    document.title='了解详情';
                 }else{
                     $('#j_tab1').hide();
                     $('#j_tab2').show();
                     this.msg = '确认';
+                    document.title='我要报名';
                 }
             },
             jump: function(e){
@@ -60,8 +67,14 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                     alert('请输入正确的手机号');
                     return false;
                 }
-                if(!this.addr){
-                    alert('请输入地址');
+                var stime = Util.getQueryParam('stime'),
+                    etime = Util.getQueryParam('etime'),
+                    sDate = Util.parseDateObj(stime),
+                    eDate = Util.parseDateObj(etime),
+                    nDate = Util.parseDateObj(this.date);
+
+                if(!this.date || sDate.getTime() > nDate.getTime() || eDate.getTime() < nDate.getTime()){
+                    alert('活动时间必须在' + Util.getQueryParam('stime') + '和' + Util.getQueryParam('etime') + '之间');
                     return false;
                 }
 
@@ -73,7 +86,7 @@ require(['vue', 'Zepto', 'Loading', 'Req', 'Util'], function (Vue, $, Loading, R
                 }else{
                     if(this.validateParam()){
                         Loading.showLoading();
-                        var paramStr = 'aid=' + Util.getQueryParam('aid') + '&address=' + this.addr + '&number=' + this.num + '&mobile=' + this.tel + '&name=' + this.name;
+                        var paramStr = 'aid=' + Util.getQueryParam('aid') + '&activedate=' + this.date + '&number=' + this.num + '&mobile=' + this.tel + '&name=' + this.name;
                         Req.execute('booking', paramStr, function (data) {
                             Loading.hideLoading();
                             if(data.IsSuccess == '1'){

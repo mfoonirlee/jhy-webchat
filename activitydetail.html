@@ -12,24 +12,24 @@
     <body>
         <div id='j_main' class='freetastedetail'>
             <div class='t'>
-                <img src="./img/dd1.jpg">
-                <p>香菇菜包</p>
+                <img v-bind:src="data.img">
+                <p>{{data.title}}</p>
             </div>
-            <div class='info'>
-                <h3>君禾园 香菇菜包 210克/包</h3>
-                <p>今天天气不错</p>
+            <div class='info' id='j_tab1'>
+                <h3>{{data.title}}</h3>
+                <p>{{data.desc}}</p>
             </div>
-            <div class="fill">
+            <div class="fill" id='j_tab2'>
                 <ul>
-                    <li><span>姓名</span><input type="text" /><em>*</em></li>
-                    <li><span>手机号码</span><input type="text"><em>*</em></li>
-                    <li><span>详细地址</span><input type="text"><em>*</em></li>
-                    <li><span>申请份数</span><i class='add'></i><input class='s' type="num"><i class='reduce'></i></li>
+                    <li><span>姓名</span><input type="text" v-model='name'/><em>*</em></li>
+                    <li><span>手机号码</span><input type="text" v-model='tel'><em>*</em></li>
+                    <li><span>活动日期</span><input id='j_date' type="date" v-model='date'><em>*</em></li>
+                    <li><span>申请份数</span><i class='add' @click='add'></i><input class='s' type="num" v-model='num'><i class='reduce' @click='reduce'></i></li>
                 </ul>
             </div>
             <div class="b">
-                <span>我要试吃</span>
-                <span>返&nbsp;&nbsp;&nbsp;&nbsp;回</span>
+                <span @click='bookByType'>{{msg}}</span>
+                <span @click='returnByType'>返&nbsp;&nbsp;&nbsp;&nbsp;回</span>
             </div>
         </div>
     </body>
