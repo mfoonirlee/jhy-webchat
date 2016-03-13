@@ -187,35 +187,37 @@
       width: 60px;
       text-align: center; }
 
-.easylifelist ul li {
-  padding: 10px 0 10px 120px;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-  overflow-y: hidden; }
-  .easylifelist ul li img {
-    width: 100px;
-    height: 60px;
-    position: absolute;
-    left: 10px;
-    top: 14px; }
-  .easylifelist ul li h3 {
-    font-weight: bold;
-    font-size: 14px;
-    margin-left: -7px; }
-  .easylifelist ul li span {
-    color: #666;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; }
-  .easylifelist ul li i {
-    display: inline-block;
-    border: 1px solid #a8ce3b;
-    color: #a8ce3b;
-    border-radius: 5px;
-    padding: 1px 3px;
-    margin-top: 5px;
-    margin-right: 10px; }
+.easylifelist ul {
+  margin-bottom: 44px; }
+  .easylifelist ul li {
+    padding: 10px 0 10px 120px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    overflow-y: hidden; }
+    .easylifelist ul li img {
+      width: 100px;
+      height: 60px;
+      position: absolute;
+      left: 10px;
+      top: 14px; }
+    .easylifelist ul li h3 {
+      font-weight: bold;
+      font-size: 14px;
+      margin-left: -7px; }
+    .easylifelist ul li span {
+      color: #666;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; }
+    .easylifelist ul li i {
+      display: inline-block;
+      border: 1px solid #a8ce3b;
+      color: #a8ce3b;
+      border-radius: 5px;
+      padding: 1px 3px;
+      margin-top: 5px;
+      margin-right: 10px; }
 
 .bar {
   position: fixed;

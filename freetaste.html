@@ -15,7 +15,7 @@
             <ul>
                 <li class='ani-downrotatein' v-for="n in list">
                     <img v-bind:src='n.img' alt="">
-                    <h3>{{n.cond}}</h3>
+                    <h3>{{n.name}}</h3>
                     <span>{{n.cont}}</span>
                     <i data-aid={{n.id}} data-type='2' @click='jumptodetail'>我要试吃</i><i data-type='1' data-aid={{n.id}} @click='jumptodetail'>了解详情</i>
                 </li>
