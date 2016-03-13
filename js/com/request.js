@@ -7,7 +7,7 @@ define(['Zepto'], function ($) {
     var request = {
         reqHost: {
             dev: 'http://localhost:82/',
-            prd: 'http://112.124.110.58:8080/'
+            prd: 'http://112.124.110.58:8085/'
         },
         reqHash: {
             //请求注册验证码
