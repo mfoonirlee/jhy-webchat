@@ -82,6 +82,9 @@ $c-grey: #f5f5f5;
     ul{
         margin: 30px;
         li{
+            em{
+                color: red;
+            }
             padding: 5px 0;
             &:nth-of-type(1){
                 @include dur(.6s);
@@ -103,6 +106,12 @@ $c-grey: #f5f5f5;
             }
             &:nth-of-type(7){
                 @include dur(2.4s);
+            }
+            &:nth-of-type(8){
+                @include dur(2.7s);
+            }
+            &:nth-of-type(9){
+                @include dur(3s);
             }
         }
     }

@@ -169,3 +169,6 @@ li{
     animation-fill-mode: both;
     position: absolute;
 }
+.hide{
+    display: none !important;
+}

@@ -53,6 +53,8 @@
   margin: 30px; }
   .recharge ul li {
     padding: 5px 0; }
+    .recharge ul li em {
+      color: red; }
     .recharge ul li:nth-of-type(1) {
       -webkit-animation-duration: 0.6s;
       animation-duration: 0.6s; }
@@ -74,6 +76,12 @@
     .recharge ul li:nth-of-type(7) {
       -webkit-animation-duration: 2.4s;
       animation-duration: 2.4s; }
+    .recharge ul li:nth-of-type(8) {
+      -webkit-animation-duration: 2.7s;
+      animation-duration: 2.7s; }
+    .recharge ul li:nth-of-type(9) {
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s; }
 .recharge button {
   border: 1px solid #a8ce3b;
   color: #a8ce3b;
